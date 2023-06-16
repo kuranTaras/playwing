@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 13px;
+}
+body {
+  min-height: 100vh;
+  background: #1E2128;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
+.btn-purple {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+  background: #BF2DE2;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  min-width: 230px;
+  text-align: center;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -5px;
+    background: #9E25BB;
+    border-radius: 12px;
+    z-index: -1;
+  }
+}
+.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 23px;
+  .title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
+  }
+  .number {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    /* identical to box height, or 20px */
+
+
+    color: #111127;
+    background: #AED300;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+}
+.btn-green {
+  display: block;
+  min-width: 135px;
+  background: #AED300;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #000000;
+}
+.pop {
+  position: fixed;
+  top: 70px;
+  left: 10px;
+  width: calc(100% - 20px);
+  background: #AED300;
+  opacity: 0.9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  z-index: 100;
+  transition-duration: .4s;
+  &-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #000000;
+    padding: 14px 5px;
+  }
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

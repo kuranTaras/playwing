@@ -1,0 +1,47 @@
+.foot {
+  .container {
+    align-items: center;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+  &__link {
+    &:not(:last-child) {
+      margin-right: 43px;
+    }
+    a {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      text-decoration-line: underline;
+
+      color: #BABABA;
+    }
+  }
+  &__logo {
+    display: flex;
+    margin-bottom: 9px;
+    img {
+      width: 71px;
+      height: 13px;
+      object-fit: contain;
+    }
+  }
+  &__copyright {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height */
+
+
+    color: #BABABA;
+    margin-bottom: 7px;
+  }
+}

@@ -1,0 +1,36 @@
+.footer {
+  margin-bottom: 9px;
+  .container {
+    align-items: center;
+  }
+  &__buttons {
+    display: flex;
+    margin-bottom: 22px;
+  }
+  &-btn {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  &__logo {
+    display: flex;
+    margin-bottom: 6px;
+    img {
+      width: 140px;
+      height: 26px;
+      object-fit: contain;
+    }
+  }
+  &-copyright {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+}

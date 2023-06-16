@@ -1,0 +1,38 @@
+.head {
+  padding: 13px 0 10px 0;
+  .container {
+    padding-left: 15px;
+    padding-right: 21px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &-lang {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+  }
+  &__logo {
+    margin-top: 3px;
+    display: flex;
+    animation: logo 2s;
+    img {
+      width: 53px;
+      height: 43px;
+      object-fit: contain;
+    }
+  }
+}
+
+@keyframes logo {
+  0% {
+    transform: scale(0) rotateZ(360deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
