@@ -25,6 +25,7 @@ if ($('.pop').length) {
 // input phone
 if ($(".sub__form-phone-input input").length) {
 
+    // mask phone
     const item = document.querySelector('.sub__form-phone-input input')
 
     var maskOptions = {
@@ -32,6 +33,8 @@ if ($(".sub__form-phone-input input").length) {
     };
     var mask = IMask(item, maskOptions);
 
+
+    // input phone validation
     $(".sub__form-phone-input input").on('keyup', () => {
         if ($(".sub__form-phone-input input").val().length === 12) {
             $('.form-phone').removeClass('disabled')
@@ -42,7 +45,7 @@ if ($(".sub__form-phone-input input").length) {
 
 
 
-
+    // mask code inputs
     var elements = document.querySelectorAll('.sub__form-pin-input input');
     elements.forEach((item, index) => {
         var maskOptions = {
@@ -52,6 +55,7 @@ if ($(".sub__form-phone-input input").length) {
     })
 
 
+    // validation for code
     elements.forEach(function (item, index) {
         item.addEventListener('keyup', () => {
             if (index !== elements.length-1) {
@@ -64,7 +68,9 @@ if ($(".sub__form-phone-input input").length) {
                     elements[index-1].focus()
                 }
             }
-            if (elements[0].value === '4' && elements[1].value === '3' && elements[2].value === '2' && elements[3].value === '1') {
+            // VALIDATION CODE
+            const validCode = '4321'
+            if (elements[0].value === validCode[0] && elements[1].value === validCode[1] && elements[2].value === validCode[2] && elements[3].value === validCode[3]) {
                 $('.form-code').removeClass('disabled')
             } else {
                 $('.form-code').addClass('disabled')
@@ -88,6 +94,7 @@ if ($('.sub__more').length) {
     })
 }
 
+// submit form phone
 $('.form-phone').on('submit', (e) => {
     e.preventDefault()
     $('.sub__form').eq(0).removeClass('active')
@@ -95,11 +102,13 @@ $('.form-phone').on('submit', (e) => {
     $('.sub').addClass('pin')
 })
 
+// submit form code
 $('.form-code').on('submit', (e) => {
     e.preventDefault()
     window.location = '/'
 })
 
+// change number event
 $('.sub-change').on('click', (e) => {
     e.preventDefault()
     $('.sub').removeClass('pin')
