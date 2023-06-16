@@ -87,7 +87,7 @@ if ($('.sub__more').length) {
         }
     })
 }
- 
+
 $('.form-phone').on('submit', (e) => {
     e.preventDefault()
     $('.sub__form').eq(0).removeClass('active')
